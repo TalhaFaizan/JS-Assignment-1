@@ -40,3 +40,21 @@ for(let i = 0;i<str.length;i++){
 console.log("Formatted Array:", formattedArray);
 
 
+let str = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae facere sapiente magni cum! Rerum ipsa corrupti animi? Quo odio sequi laboriosam quos suscipit possimus. Omnis a voluptate repellendus culpa eveniet?";
+
+let userfind = "omnis";
+let counter = 0;
+
+let lowerStr = str.toLowerCase();
+let lowerUserfind = userfind.toLowerCase();
+
+for (let i = 0; i < lowerStr.length; i++) {
+    if (lowerUserfind === lowerStr.slice(i, i + lowerUserfind.length)) {
+        ++counter;
+        console.log("Match");
+    } else {
+        console.log("Not Match");
+    }
+}
+
+console.log("Total matches:", counter);
